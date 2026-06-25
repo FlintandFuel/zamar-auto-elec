@@ -1,6 +1,16 @@
 import { useState, useEffect } from 'react'
 
-const OFFER_EXPIRES = "2099-01-01T23:59:59"
+const SEVEN_DAYS = 7 * 24 * 60 * 60 * 1000
+
+function getDeadline() {
+  const key = 'sb_start'
+  let start = localStorage.getItem(key)
+  if (!start) {
+    start = String(Date.now())
+    localStorage.setItem(key, start)
+  }
+  return Number(start) + SEVEN_DAYS
+}
 
 function pad(n) {
   return String(n).padStart(2, '0')
@@ -33,7 +43,7 @@ export default function SalesBar() {
   const [remaining, setRemaining] = useState(null)
 
   useEffect(() => {
-    const expiry = new Date(OFFER_EXPIRES).getTime()
+    const expiry = getDeadline()
 
     const tick = () => setRemaining(expiry - Date.now())
     tick()

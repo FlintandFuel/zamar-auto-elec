@@ -284,7 +284,7 @@ function Hero() {
             WhatsApp Us Now
           </a>
           <a
-            href="tel:"
+            href="tel:0609620600"
             className="inline-flex items-center gap-2.5 border-2 border-white/25 hover:border-white/50 text-white font-semibold text-base px-7 py-4 rounded transition-colors duration-200 min-h-[48px]"
           >
             <PhoneIcon className="w-5 h-5" />
@@ -676,7 +676,7 @@ function ContactCTA() {
                 WhatsApp Us Now
               </a>
               <a
-                href="tel:"
+                href="tel:0609620600"
                 className="inline-flex items-center gap-2.5 border-2 border-white/25 hover:border-white/50 text-white font-semibold text-base px-7 py-4 rounded transition-colors duration-200 min-h-[48px]"
               >
                 <PhoneIcon className="w-5 h-5" />
