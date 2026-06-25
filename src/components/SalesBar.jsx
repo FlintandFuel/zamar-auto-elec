@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 const SEVEN_DAYS = 7 * 24 * 60 * 60 * 1000
 
 function getDeadline() {
-  const key = 'sb_start'
+  const key = 'sb_start_v2'
   let start = localStorage.getItem(key)
   if (!start) {
     start = String(Date.now())
